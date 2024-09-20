@@ -1,17 +1,18 @@
+import { getServerSession } from "next-auth";
 import { NextResponse } from "next/server";
-import { PrismaClient } from "@repo/db/client"
+import { authOptions } from "../../lib/auth";
 
-const client = new PrismaClient();
 
 export const GET = async () => {
-    await client.user.create({
-        data: {
-            email: "abc",
-            name: "Abc"
-        }
-    })
-
+    const session = await getServerSession(authOptions);
+    if (session.user) {
+        return NextResponse.json({
+            user: session.user
+        })
+    }
     return NextResponse.json({
-        message: "Hi There"
+        message: "You are not logged in"
+    }, {
+        status: 403
     })
 }
