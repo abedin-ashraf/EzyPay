@@ -8,6 +8,7 @@ export const authOptions = {
         CredentialsProvider({
             name: 'Credentials',
             credentials: {
+                email: { label: "Email", type: "text", placeholder: "youremail@gmail.com" },
                 phone: { label: "Phone number", type: "text", placeholder: "1211231231" },
                 password: { label: "Password", type: "password" }
             },
@@ -33,6 +34,7 @@ export const authOptions = {
                 try {
                     const user = await db.user.create({
                         data: {
+                            email: credentials.email,
                             number: credentials.phone,
                             password: hashedPassword
                         }
