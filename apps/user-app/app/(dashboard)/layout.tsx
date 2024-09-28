@@ -1,5 +1,16 @@
 import { SidebarItem } from "../../components/Sidebaritem";
-
+import { NavItem } from "../../components/NavItem";
+import {
+    Bell,
+    CreditCard,
+    DollarSign,
+    Home,
+    PieChart,
+    Plus,
+    Send,
+    Settings,
+    User
+} from 'lucide-react'
 export default function Layout({
     children,
 }: {
@@ -17,6 +28,7 @@ export default function Layout({
             </div>
             {children}
         </div>
+
     );
 }
 

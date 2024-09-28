@@ -6,7 +6,7 @@ async function main() {
         where: { number: '9999999999' },
         update: {},
         create: {
-            number: '9999999999',
+            email: 'alice@gmail.com',
             password: 'alice',
             name: 'alice',
             OnRampTransaction: {
@@ -24,7 +24,7 @@ async function main() {
         where: { number: '9999999998' },
         update: {},
         create: {
-            number: '9999999998',
+            email: 'bob@gmail.com',
             password: 'bob',
             name: 'bob',
             OnRampTransaction: {

@@ -80,7 +80,7 @@ export default async function () {
     const receivedTransactions: any = await getreceiveP2PTransactions()
 
     return (
-        <div className="flex flex-col gap-5">
+        <div className="w-full flex flex-col gap-5">
             <h1 className="text-4xl text-[#6a51a6] pt-8 mb-8 font-bold">
                 Transactions
             </h1>
